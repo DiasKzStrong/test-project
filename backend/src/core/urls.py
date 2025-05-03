@@ -20,7 +20,8 @@ from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 api = [
-    path("cfs/", include("apps.cfs.api.urls")),
+    path("cfs/", include("apps.cfs.urls")),
+    path("dictionaries/", include("apps.dictionary.urls")),
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
     path("docs/", SpectacularSwaggerView.as_view(url_name="schema"), name="docs"),
 ]

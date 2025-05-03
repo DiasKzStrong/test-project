@@ -6,4 +6,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'core',
+    'apps.cfs',
+    'apps.dictionary',
+    'drf_spectacular',
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'corsheaders',
 ]

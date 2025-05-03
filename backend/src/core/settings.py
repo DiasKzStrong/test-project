@@ -9,14 +9,15 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-from pathlib import Path
 from decouple import config
 from split_settings.tools import include
-SECRET_KEY = "django-insecure-q&krc&pi$kukmy^sx$tv7om+&bzbd5hikn=rbjvd5-9@1)i&ex"
+SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config("DEBUG",default=False, cast=bool)
 
 include(
+    "conf/logs.py",
+    "conf/api.py",
     "conf/i18n.py",
     "conf/timezone.py",
     "conf/db.py",

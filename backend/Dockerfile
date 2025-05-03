@@ -1,6 +1,8 @@
-FROM python:3.13-alpine
+FROM python:3.13-slim
 
 WORKDIR /app
+
+RUN apt-get update && apt-get install -y gcc 
 
 RUN pip install poetry
 
@@ -8,8 +10,8 @@ COPY pyproject.toml .
 
 COPY poetry.lock .
 
-RUN poetry install
+RUN poetry config virtualenvs.create false && poetry install --no-root
 
 COPY . .
 
-CMD ["poetry", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
+WORKDIR /app/src

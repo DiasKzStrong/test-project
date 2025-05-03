@@ -1,4 +1,3 @@
-import os
 from django.core.management.commands.startapp import Command as StartAppCommand
 from django.conf import settings
 
