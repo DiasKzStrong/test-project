@@ -57,3 +57,15 @@
    docker-compose down -v
    docker-compose up -d --build
    ```
+
+## Скрины проекта 
+
+**Страница ДДС**
+
+<img width="1297" alt="Screenshot 2025-05-04 at 13 08 05" src="https://github.com/user-attachments/assets/e6732412-2342-43df-8e9d-51064688831e" />
+
+
+**Страница Справочников**
+
+<img width="1308" alt="Screenshot 2025-05-04 at 13 08 52" src="https://github.com/user-attachments/assets/d38de5a6-ed64-48a3-87ab-28e73981f5e9" />
+
