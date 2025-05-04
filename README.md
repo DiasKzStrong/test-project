@@ -28,6 +28,7 @@
 
 1. Соберите и запустите контейнеры:
    ```bash
+   docker compose build
    docker-compose up -d
    ```
 
